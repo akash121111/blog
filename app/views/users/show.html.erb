@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
+<h1 align="center">Welcome To <%= @user.username %>'s page</h1>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4 center">
+   
+  <%= gravatar_for @user, size: 150%>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    
+  </div>
+  </div>
+  <h4 align="center"><%= @user.username %>'s Articles </h4>
+  <%= render 'articles/article', obj: @user.articles %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

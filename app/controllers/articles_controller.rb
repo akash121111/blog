@@ -10,7 +10,7 @@ class ArticlesController < ApplicationController
     if @article.save
         flash[:success] ="Article was Sucessfully created"
      
-        redirect_to article_path(@article)
+        redirect_to article_path(@article)  
     else
         render 'new' 
     end
@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
 
     end
     def show
-        
+       
 
     end
     def edit
